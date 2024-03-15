@@ -6,7 +6,7 @@ const port = 3000
 const connectDB = require('./db/connect')
 require('dotenv').config()
 // middleware
-
+app.use(express.static('./public'))
 app.use(express.json()) // if don't use it we won't have data in req.body: it's necessary to send body in json format while in post/put etc reqs
 
 // routes
