@@ -2,7 +2,7 @@ require('./db/connect')
 const express = require('express')
 const app = express()
 const tasks = require('./routes/tasks')
-const port = 3000
+const port = process.env.PORT || 3000 // `PORT=6000 node app.js` spins up the server at port 6000
 const connectDB = require('./db/connect')
 require('dotenv').config()
 const notFound = require('./middleware/not-found')
