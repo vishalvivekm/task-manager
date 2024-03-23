@@ -17,7 +17,7 @@ app.use(express.json()) // if don't use it we won't have data in req.body: it's 
 // })
 app.use('/api/v1/tasks', tasks)
 app.use(notFound)
-app.use(errorHandlerMiddleware)
+app.use(errorHandlerMiddleware) // error handling mw# https://expressjs.com/en/guide/using-middleware.html#middleware.error-handling
 
 const start = async () => {
     try {
